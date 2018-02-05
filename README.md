@@ -9,7 +9,7 @@
     3. The Security Group you choose for the Lambda function should be allowed in the inbound rules of the RDS security group.
 
 #### Node.js script
-[Link to the Lambda function script] (https://github.com/shivamgulati1991/LambdaRDSSnapshot/blob/master/RDSSnapshotNodejs.js)
+[Lambda function script](https://github.com/shivamgulati1991/LambdaRDSSnapshot/blob/master/RDSSnapshotNodejs.js)
 
 #### Testing the function
 
