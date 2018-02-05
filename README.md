@@ -2,7 +2,7 @@
 
 #### Pre-requisites and General setup:
 
-1. The IAM role the function should have access to the RDS resources.
+1. The IAM role for the function should have access to the RDS resources.
 2. The function needs access to RDS resources as well as the internet, hence, the Lambda function has to be VPC enabled. To also allow internet access, please create or check the following if already created.
     1. The VPC should have two or more private subnets with an associated route for 0.0.0.0/0 on the NAT Gateway. Please note that having an Internet Gateway for these subnets will not work.
     2. Choose the above subnets while creating your Lambda function.
