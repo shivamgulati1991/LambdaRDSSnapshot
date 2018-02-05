@@ -23,5 +23,5 @@ Create an empty test event for testing the above function. If the test is succes
 
 #### Helpful links:
 
-Lambda task creation (https://docs.aws.amazon.com/lambda/latest/dg/get-started-create-function.html)
-Node.js AWS APIs (https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/RDS.html)
+1. Lambda task creation (https://docs.aws.amazon.com/lambda/latest/dg/get-started-create-function.html)
+2. Node.js AWS APIs (https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/RDS.html)
