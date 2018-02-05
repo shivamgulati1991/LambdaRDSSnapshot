@@ -4,9 +4,9 @@
 
 1. The IAM role the function should have access to the RDS resources.
 2. The function needs access to RDS resources as well as the internet, hence, the Lambda function has to be VPC enabled. To also allow internet access, please create or check the following if already created.
-  1. The VPC should have two or more private subnets with an associated route for 0.0.0.0/0 on the NAT Gateway. Please note that having an Internet Gateway for these subnets will not work.
-  2. Choose the above subnets while creating your Lambda function.
-  3. The Security Group you choose for the Lambda function should be allowed in the inbound rules of the RDS security group.
+    1. The VPC should have two or more private subnets with an associated route for 0.0.0.0/0 on the NAT Gateway. Please note that having an Internet Gateway for these subnets will not work.
+    2. Choose the above subnets while creating your Lambda function.
+    3. The Security Group you choose for the Lambda function should be allowed in the inbound rules of the RDS security group.
 
 ### Node.js script
 
@@ -35,7 +35,7 @@ exports.handler = function(event, context) {
 
 ### Testing the function
 
-Next, create an empty test event for testing the above function. If the test is successful, proceed with the trigger setup. If the test fails, check the CloudWatch logs for the errors. Some sample issues I faced:
+1. Next, create an empty test event for testing the above function. If the test is successful, proceed with the trigger setup. If the test fails, check the CloudWatch logs for the errors. Some sample issues I faced:
 
 If the function is timing out, try to increase the default timeout from 3 seconds to 10 seconds. If it still times out, there's a good chance the issue is with the VPC setup for the Lambda function and the function is not able to access the internet.
 If the function gives an error that it isn't able to access RDS or any specific resources, please check the IAM role.
